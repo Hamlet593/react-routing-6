@@ -8,8 +8,10 @@ const Layout = () => {
         <Link to="/posts">Posts</Link>
         <Link to="/about">About</Link>
       </header>
-      <Outlet />
-      <footer>2023 All righst reserved.</footer>
+      <main className="container">
+        <Outlet />
+      </main>
+      <footer className="container">2023 All righst reserved.</footer>
     </>
   );
 };
