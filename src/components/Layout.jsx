@@ -1,19 +1,25 @@
 import { NavLink, Outlet } from "react-router-dom";
 
 const Layout = () => {
-  const setActive = ({ isActive }) => (isActive ? "active-link" : "");
+  const setActiveWithClass = ({ isActive }) => (isActive ? "active-link" : "");
+  const setActiveWithStyle = ({ isActive }) => ({
+    color: isActive ? "green" : "",
+  });
 
   return (
     <>
       <header>
-        <NavLink to="/" className={setActive}>
+        <NavLink to="/" className={setActiveWithClass}>
           Home
         </NavLink>
-        <NavLink to="/posts" className={setActive}>
+        <NavLink to="/posts" className={setActiveWithClass}>
           Posts
         </NavLink>
-        <NavLink to="/about" className={setActive}>
+        <NavLink to="/about" style={setActiveWithStyle}>
           About
+        </NavLink>
+        <NavLink to="/contact" style={setActiveWithStyle}>
+          Contact Us
         </NavLink>
       </header>
       <main className="container">

@@ -62,6 +62,6 @@ main a:hover {
 }
 
 .active-link {
-  color: rgb(57, 186, 25);
-  cursor: alias
+  color: green;
+  cursor: alias;
 }
