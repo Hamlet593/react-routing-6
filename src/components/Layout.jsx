@@ -1,26 +1,19 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import CustomLink from "./CustomLink";
 
 const Layout = () => {
-  const setActiveWithClass = ({ isActive }) => (isActive ? "active-link" : "");
-  const setActiveWithStyle = ({ isActive }) => ({
-    color: isActive ? "green" : "",
-  });
+  // const setActiveWithClass = ({ isActive }) => (isActive ? "active-link" : "");
+  // const setActiveWithStyle = ({ isActive }) => ({
+  //   color: isActive ? "green" : "",
+  // });
 
   return (
     <>
       <header>
-        <NavLink to="/" className={setActiveWithClass}>
-          Home
-        </NavLink>
-        <NavLink to="/posts" className={setActiveWithClass}>
-          Posts
-        </NavLink>
-        <NavLink to="/about" style={setActiveWithStyle}>
-          About
-        </NavLink>
-        <NavLink to="/contact" style={setActiveWithStyle}>
-          Contact Us
-        </NavLink>
+        <CustomLink to="/">Home</CustomLink>
+        <CustomLink to="/posts">Posts</CustomLink>
+        <CustomLink to="/about">About</CustomLink>
+        <CustomLink to="/contact">Contact Us</CustomLink>
       </header>
       <main className="container">
         <Outlet />
